@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Say No to Paper Cups</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav id="navbar">
+    <div class="logo">EcoCup</div>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#health">Health Issues</a></li>
+        <li><a href="#environment">Environmental Impact</a></li>
+        <li><a href="#alternatives">Alternatives</a></li>
+        <li><a href="#causes">Causes & Facts</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<header id="home" class="hero">
+    <h1>Say No to Paper Cups</h1>
+    <p>Protect your health, protect the Earth.</p>
+    <a href="#health" class="cta">Learn More</a>
+</header>
+
+<section id="health" class="section fade-in">
+    <h2>Health Issues</h2>
+    <div class="card-container">
+        <div class="card">
+            <img src="https://img.icons8.com/ios/50/000000/microplastic.png" alt="microplastic icon">
+            <h3>Micro‑plastic Ingestion</h3>
+            <p>Paper cups often contain a thin plastic lining that breaks down into micro‑plastics.</p>
+        </div>
+        <div class="card">
+            <img src="https://img.icons8.com/ios/50/000000/chemical.png" alt="chemical icon">
+            <h3>Chemical Leaching</h3>
+            <p>Heat can cause harmful chemicals (e.g., BPA) to migrate into hot drinks.</p>
+        </div>
+    </div>
+</section>
+
+<section id="environment" class="section fade-in">
+    <h2>Environmental Impact</h2>
+    <div class="card-container">
+        <div class="card">
+            <img src="https://img.icons8.com/ios/50/000000/tree.png" alt="tree icon">
+            <h3>Deforestation</h3>
+            <p>Millions of trees are cut each year to produce disposable cups.</p>
+        </div>
+        <div class="card">
+            <img src="https://img.icons8.com/ios/50/000000/water.png" alt="water icon">
+            <h3>Water Pollution</h3>
+            <p>Most paper cups end up in oceans, adding to plastic waste.</p>
+        </div>
+    </div>
+</section>
+
+<section id="alternatives" class="section fade-in">
+    <h2>Alternatives</h2>
+    <table class="comparison">
+        <thead>
+            <tr>
+                <th>Material</th><th>Reusable</th><th>Cost</th><th>Environmental Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Stainless Steel</td><td>✔️</td><td>Medium</td><td>High</td></tr>
+            <tr><td>Ceramic</td><td>✔️</td><td>Medium</td><td>High</td></tr>
+            <tr><td>Bamboo</td><td>✔️</td><td>Low</td><td>Very High</td></tr>
+            <tr><td>Paper (coated)</td><td>❌</td><td>Low</td><td>Low</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="causes" class="section fade-in">
+    <h2>Causes & Facts</h2>
+    <div class="grid-3">
+        <div class="icon-box">
+            <img src="https://img.icons8.com/ios/50/000000/deforestation.png" alt="deforestation icon">
+            <p>1.2 billion trees lost annually for paper products</p>
+        </div>
+        <div class="icon-box">
+            <img src="https://img.icons8.com/ios/50/000000/factory.png" alt="factory icon">
+            <p>40 % of paper waste comes from single‑use cups</p>
+        </div>
+        <div class="icon-box">
+            <img src="https://img.icons8.com/ios/50/000000/health.png" alt="health icon">
+            <p>Micro‑plastics have been found in 90 % of bottled water</p>
+        </div>
+    </div>
+</section>
+
+<section id="quiz" class="section fade-in">
+    <h2>Quick Quiz</h2>
+    <p>Do you use paper cups daily?</p>
+    <button class="quiz-btn" data-answer="yes">Yes</button>
+    <button class="quiz-btn" data-answer="no">No</button>
+    <div class="result" style="display:none;">
+        <p id="result-text"></p>
+    </div>
+</section>
+
+<footer>
+    <a href="#">Learn More</a> |
+    <a href="#">Join the Movement</a>
+    <div class="social">
+        <a href="#"><img src="https://img.icons8.com/ios/24/ffffff/facebook.png" alt="facebook"></a>
+        <a href="#"><img src="https://img.icons8.com/ios/24/ffffff/twitter.png" alt="twitter"></a>
+        <a href="#"><img src="https://img.icons8.com/ios/24/ffffff/instagram.png" alt="instagram"></a>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

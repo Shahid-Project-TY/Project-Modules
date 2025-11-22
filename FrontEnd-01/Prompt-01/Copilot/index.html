@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta & Basics -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Say No to Paper Cups</title>
+  <meta name="description" content="Learn about the health and environmental issues caused by paper cups and explore sustainable alternatives." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Favicon (optional) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+
+</head>
+<body>
+
+  <!-- Header & Sticky Navbar -->
+  <header class="header">
+    <nav class="navbar container">
+      <a href="#" class="logo" aria-label="Home">🌿 EcoAware</a>
+
+      <!-- Desktop Nav -->
+      <ul class="nav-links" role="menubar">
+        <li role="none"><a role="menuitem" href="#home">Home</a></li>
+        <li role="none"><a role="menuitem" href="#health">Health issues</a></li>
+        <li role="none"><a role="menuitem" href="#environment">Environmental impact</a></li>
+        <li role="none"><a role="menuitem" href="#alternatives">Alternatives</a></li>
+        <li role="none"><a role="menuitem" href="#facts">Causes & facts</a></li>
+        <li role="none"><a role="menuitem" href="#quiz">Awareness quiz</a></li>
+      </ul>
+
+      <!-- Hamburger (Mobile) -->
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu" hidden>
+      <a href="#home">Home</a>
+      <a href="#health">Health issues</a>
+      <a href="#environment">Environmental impact</a>
+      <a href="#alternatives">Alternatives</a>
+      <a href="#facts">Causes & facts</a>
+      <a href="#quiz">Awareness quiz</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <h1>Say No to Paper Cups</h1>
+      <p class="tagline">Protect your health, protect the Earth.</p>
+      <button class="btn primary" id="cta-awareness">Learn why</button>
+    </div>
+    <!-- Decorative bottom wave -->
+    <svg class="hero-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,64L48,69.3C96,75,192,85,288,85.3C384,85,480,75,576,58.7C672,43,768,21,864,16C960,11,1056,21,1152,32C1248,43,1344,53,1392,58.7L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z" fill="var(--bg)"></path>
+    </svg>
+  </section>
+
+  <main>
+
+    <!-- Health Issues -->
+    <section id="health" class="section container reveal">
+      <h2>Health issues</h2>
+      <p class="section-lead">Paper cups often have plastic linings and chemical additives that can leach into hot beverages, leading to potential health risks.</p>
+
+      <div class="card-grid">
+        <!-- Card 1 -->
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <!-- Microplastics icon (cup + particles) -->
+            <svg viewBox="0 0 64 64" class="icon">
+              <path d="M16 8h32l-3 36a12 12 0 0 1-12 11h-2a12 12 0 0 1-12-11L16 8z" fill="#8BC34A"></path>
+              <circle cx="24" cy="28" r="2" fill="#2E7D32"></circle>
+              <circle cx="32" cy="22" r="2" fill="#2E7D32"></circle>
+              <circle cx="40" cy="30" r="2" fill="#2E7D32"></circle>
+            </svg>
+          </div>
+          <h3>Microplastic ingestion</h3>
+          <p>Hot liquids can release microplastics from cup linings, which may end up in your drink. Repeated exposure increases ingestion over time.</p>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <!-- Chemical icon (flask) -->
+            <svg viewBox="0 0 64 64" class="icon">
+              <path d="M24 8h16l-6 12v18l-10 10a8 8 0 0 1-11-11l11-11V20z" fill="#FFB74D"></path>
+              <circle cx="40" cy="40" r="6" fill="#F57C00"></circle>
+            </svg>
+          </div>
+          <h3>Chemical leaching</h3>
+          <p>Adhesives, inks, and plasticizers can migrate into beverages, especially when exposed to heat, acidity, or long contact time.</p>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <!-- Heat icon -->
+            <svg viewBox="0 0 64 64" class="icon">
+              <path d="M24 48c0-8 6-12 6-20s-6-12-6-20M40 48c0-8 6-12 6-20s-6-12-6-20" stroke="#E64A19" stroke-width="4" fill="none" stroke-linecap="round"></path>
+            </svg>
+          </div>
+          <h3>Heat accelerates breakdown</h3>
+          <p>High temperatures can accelerate the breakdown of coatings, increasing the release of compounds into hot drinks like tea or coffee.</p>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <!-- Shield icon -->
+            <svg viewBox="0 0 64 64" class="icon">
+              <path d="M32 8l18 6v12c0 14-10 22-18 26-8-4-18-12-18-26V14z" fill="#81C784"></path>
+              <path d="M24 30l6 6 10-10" stroke="#2E7D32" stroke-width="4" fill="none" stroke-linecap="round"></path>
+            </svg>
+          </div>
+          <h3>Potential long-term effects</h3>
+          <p>While research continues, precautionary choices—like reusable cups—reduce exposure to contaminants and support better health habits.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Environmental Impact -->
+    <section id="environment" class="section container reveal">
+      <h2>Environmental impact</h2>
+      <p class="section-lead">Paper cups are single-use items that strain forests, create hard-to-recycle waste, and contaminate waterways.</p>
+
+      <div class="impact-grid">
+        <div class="impact-img">
+          <!-- Royalty-free background example; replace as needed -->
+          <img src="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?q=80&w=1200&auto=format&fit=crop" alt="Forest in daylight" loading="lazy">
+        </div>
+        <div class="impact-details">
+          <div class="impact-item">
+            <span class="impact-icon" aria-hidden="true">🌲</span>
+            <div>
+              <h3>Deforestation pressure</h3>
+              <p>Scaling pulp production fuels logging and habitat loss, undermining biodiversity and carbon storage.</p>
+            </div>
+          </div>
+          <div class="impact-item">
+            <span class="impact-icon" aria-hidden="true">🗑️</span>
+            <div>
+              <h3>Waste surge</h3>
+              <p>Plastic-lined paper cups are difficult to recycle; most end up in landfills or incinerators.</p>
+            </div>
+          </div>
+          <div class="impact-item">
+            <span class="impact-icon" aria-hidden="true">💧</span>
+            <div>
+              <h3>Water pollution</h3>
+              <p>Fragments and chemicals from cup waste enter waterways, affecting aquatic life and ecosystems.</p>
+            </div>
+          </div>
+          <div class="impact-item">
+            <span class="impact-icon" aria-hidden="true">⚗️</span>
+            <div>
+              <h3>Energy & chemicals</h3>
+              <p>Manufacturing and coating processes consume energy and rely on chemical treatments that add to environmental burdens.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Simple infographic row -->
+      <div class="infographic-row">
+        <div class="infocard">
+          <h4>Short use, long impact</h4>
+          <p>Average use minutes vs. years to degrade.</p>
+        </div>
+        <div class="infocard">
+          <h4>Recycling challenges</h4>
+          <p>Mixed materials complicate recovery.</p>
+        </div>
+        <div class="infocard">
+          <h4>Better choices matter</h4>
+          <p>Reusable options cut waste drastically.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alternatives with Interactive Comparison Table -->
+    <section id="alternatives" class="section container reveal">
+      <h2>Alternatives</h2>
+      <p class="section-lead">Choose long-lasting materials that are safe, easy to clean, and kind to the planet.</p>
+
+      <div class="alt-grid">
+        <div class="alt-cards">
+          <article class="alt-card">
+            <span class="alt-icon" aria-hidden="true">🥤</span>
+            <h3>Stainless steel</h3>
+            <p>Durable, hygienic, and great for both hot and cold drinks.</p>
+          </article>
+          <article class="alt-card">
+            <span class="alt-icon" aria-hidden="true">☕</span>
+            <h3>Ceramic</h3>
+            <p>Non-reactive and ideal for home or office use.</p>
+          </article>
+          <article class="alt-card">
+            <span class="alt-icon" aria-hidden="true">🎍</span>
+            <h3>Bamboo</h3>
+            <p>Lightweight with a natural feel—choose food-safe finishes.</p>
+          </article>
+        </div>
+
+        <!-- Interactive comparison table -->
+        <div class="table-tools">
+          <label for="priority" class="priority-label">Sort by priority:</label>
+          <select id="priority" class="select">
+            <option value="sustainability">Sustainability</option>
+            <option value="durability">Durability</option>
+            <option value="heat">Heat safety</option>
+            <option value="weight">Weight</option>
+            <option value="cost">Approx. cost</option>
+          </select>
+        </div>
+
+        <div class="table-wrap">
+          <table class="compare-table" aria-describedby="table-desc">
+            <caption id="table-desc">Compare reusable cup alternatives by key attributes.</caption>
+            <thead>
+              <tr>
+                <th>Material</th>
+                <th>Sustainability</th>
+                <th>Durability</th>
+                <th>Heat safety</th>
+                <th>Weight</th>
+                <th>Approx. cost</th>
+              </tr>
+            </thead>
+            <tbody id="table-body">
+              <!-- Rows injected via JS for interactivity -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Causes & Facts Section -->
+    <section id="facts" class="section container reveal">
+      <h2>Causes & facts</h2>
+      <p class="section-lead">A quick look at why paper cups pollute and how switching helps.</p>
+
+      <div class="facts-grid">
+        <div class="fact">
+          <div class="fact-icon pulse" aria-hidden="true">🪵</div>
+          <h3>Pulp demand</h3>
+          <p>High demand drives logging and intensifies resource extraction.</p>
+        </div>
+        <div class="fact">
+          <div class="fact-icon pulse" aria-hidden="true">🧪</div>
+          <h3>Plastic lining</h3>
+          <p>PE or similar linings resist liquids but complicate recycling.</p>
+        </div>
+        <div class="fact">
+          <div class="fact-icon pulse" aria-hidden="true">♻️</div>
+          <h3>Low recovery</h3>
+          <p>Mixed materials reduce recycling rates and increase landfill load.</p>
+        </div>
+        <div class="fact">
+          <div class="fact-icon pulse" aria-hidden="true">🔥</div>
+          <h3>Incineration</h3>
+          <p>Burning waste emits pollutants and greenhouse gases.</p>
+        </div>
+        <div class="fact">
+          <div class="fact-icon pulse" aria-hidden="true">🏞️</div>
+          <h3>Litter leakage</h3>
+          <p>Improper disposal sends fragments into soils and waterways.</p>
+        </div>
+        <div class="fact">
+          <div class="fact-icon pulse" aria-hidden="true">✅</div>
+          <h3>Reusable wins</h3>
+          <p>Durable materials reduce waste and long-term costs.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Awareness Quiz / Poll -->
+    <section id="quiz" class="section container reveal">
+      <h2>Awareness quiz</h2>
+      <p class="section-lead">A quick pulse-check. Your response updates the live results below.</p>
+
+      <form id="poll-form" class="poll-form" aria-labelledby="poll-question">
+        <h3 id="poll-question">Do you use paper cups daily?</h3>
+
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="use" value="yes" />
+            <span>Yes, almost daily</span>
+          </label>
+          <label class="option">
+            <input type="radio" name="use" value="sometimes" />
+            <span>Sometimes</span>
+          </label>
+          <label class="option">
+            <input type="radio" name="use" value="no" />
+            <span>No, I use reusables</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn secondary">Submit</button>
+        <p class="poll-note">Your vote is stored locally on this device.</p>
+      </form>
+
+      <!-- Animated results -->
+      <div class="results">
+        <div class="result-bar">
+          <span class="label">Yes</span>
+          <div class="bar"><div class="fill" data-key="yes" style="width: 0%"></div></div>
+          <span class="percent" data-key="yes">0%</span>
+        </div>
+        <div class="result-bar">
+          <span class="label">Sometimes</span>
+          <div class="bar"><div class="fill" data-key="sometimes" style="width: 0%"></div></div>
+          <span class="percent" data-key="sometimes">0%</span>
+        </div>
+        <div class="result-bar">
+          <span class="label">No</span>
+          <div class="bar"><div class="fill" data-key="no" style="width: 0%"></div></div>
+          <span class="percent" data-key="no">0%</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="foot-brand">
+        <a href="#" class="logo">🌿 EcoAware</a>
+        <p class="foot-tag">Small choices, big impact.</p>
+      </div>
+      <div class="foot-links">
+        <a href="#environment" class="foot-link">Learn more</a>
+        <a href="#alternatives" class="foot-link">Join the movement</a>
+        <div class="socials">
+          <a class="social" href="#" aria-label="Twitter">🐦</a>
+          <a class="social" href="#" aria-label="Instagram">📸</a>
+          <a class="social" href="#" aria-label="LinkedIn">🔗</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© <span id="year"></span> EcoAware. Built with love for nature.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

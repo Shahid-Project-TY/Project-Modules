@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Say No to Paper Cups</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <header class="nav-container">
+    <nav class="navbar">
+      <a class="brand" href="#">🌱 Say No to Paper Cups</a>
+
+      <button class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#health">Health Issues</a></li>
+        <li><a href="#environment">Environmental Impact</a></li>
+        <li><a href="#alternatives">Alternatives</a></li>
+        <li><a href="#facts">Causes & Facts</a></li>
+        <li><a href="#quiz">Awareness</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <h1 class="hero-title">Say No to Paper Cups</h1>
+      <p class="hero-sub">Protect your health, protect the Earth.</p>
+      <button class="cta" id="to-awareness">Learn & Act</button>
+    </div>
+  </section>
+
+  <!-- HEALTH ISSUES -->
+  <section id="health" class="section">
+    <div class="container">
+      <h2>Health Issues</h2>
+      <p class="lead">Paper cups seem harmless — but they pose hidden risks.</p>
+
+      <div class="cards">
+        <article class="card" data-animate>
+          <div class="icon"><i class="fa-solid fa-microscope"></i></div>
+          <h3>Microplastics</h3>
+          <p>Plastic linings can release microplastics into hot drinks.</p>
+        </article>
+
+        <article class="card" data-animate>
+          <div class="icon"><i class="fa-solid fa-flask-vial"></i></div>
+          <h3>Chemical Leaching</h3>
+          <p>Wax + plastic coatings can leach harmful substances.</p>
+        </article>
+
+        <article class="card" data-animate>
+          <div class="icon"><i class="fa-solid fa-lungs"></i></div>
+          <h3>Long-Term Risks</h3>
+          <p>Continuous exposure may affect endocrine and digestive health.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENVIRONMENTAL IMPACT -->
+  <section id="environment" class="section soft-bg">
+    <div class="container">
+      <h2>Environmental Impact</h2>
+      <p class="lead">Paper cups harm forests, oceans, and landfills.</p>
+
+      <div class="env-grid">
+        <div class="env-media" data-animate>
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=60"/>
+        </div>
+
+        <div class="env-text" data-animate>
+          <ul class="impact-list">
+            <li><strong>Deforestation:</strong> Trees are cut for paper pulp.</li>
+            <li><strong>Landfill Waste:</strong> Cups rarely get recycled.</li>
+            <li><strong>Water Pollution:</strong> Microplastics contaminate rivers.</li>
+          </ul>
+
+          <div class="infographic">
+            <div class="info-box"><strong>8+ billion</strong><span>cups used yearly</span></div>
+            <div class="info-box"><strong>1 minute</strong><span>use ≠ 20 years waste</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALTERNATIVES -->
+  <section id="alternatives" class="section">
+    <div class="container">
+      <h2>Alternatives</h2>
+      <p class="lead">Eco-friendly options for daily use.</p>
+
+      <div class="alt-cards" data-animate>
+        <div class="alt-card"><h3>Stainless Steel</h3><p>Strong and long-lasting.</p></div>
+        <div class="alt-card"><h3>Ceramic</h3><p>Classic and safe for hot drinks.</p></div>
+        <div class="alt-card"><h3>Bamboo</h3><p>Natural and biodegradable.</p></div>
+      </div>
+
+      <div class="comparison" data-animate>
+        <h3>Quick Comparison</h3>
+
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Material</th>
+              <th>Durability</th>
+              <th>Eco Impact</th>
+              <th>Maintenance</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr><td>Paper Cup</td><td>Low</td><td>High</td><td>Disposable</td></tr>
+            <tr><td>Stainless Steel</td><td>High</td><td>Low</td><td>Dishwasher</td></tr>
+            <tr><td>Ceramic</td><td>Medium</td><td>Low</td><td>Dishwasher</td></tr>
+            <tr><td>Bamboo</td><td>Medium</td><td>Low</td><td>Hand Wash</td></tr>
+          </tbody>
+        </table>
+
+        <label class="comp-controls"><input type="checkbox" id="highlight-best"> Highlight best eco option</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACTS -->
+  <section id="facts" class="section soft-bg">
+    <div class="container">
+      <h2>Causes & Facts</h2>
+      <p class="lead">Why paper cups are a global issue.</p>
+
+      <div class="facts-grid">
+        <div class="fact" data-animate><div class="fact-icon"><i class="fa-solid fa-tree"></i></div><h4>Deforestation</h4><p>Pulp demand destroys forests.</p></div>
+        <div class="fact" data-animate><div class="fact-icon"><i class="fa-solid fa-industry"></i></div><h4>Emissions</h4><p>Paper manufacturing pollutes air.</p></div>
+        <div class="fact" data-animate><div class="fact-icon"><i class="fa-solid fa-recycle"></i></div><h4>Poor Recycling</h4><p>Plastic-coated cups can't be recycled easily.</p></div>
+        <div class="fact" data-animate><div class="fact-icon"><i class="fa-solid fa-water"></i></div><h4>Water Pollution</h4><p>Chemicals leak into rivers.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POLL -->
+  <section id="quiz" class="section">
+    <div class="container">
+      <h2>Awareness Poll</h2>
+      <p class="lead">Do you use paper cups daily?</p>
+
+      <div class="poll" data-animate>
+        <div class="poll-options">
+          <button class="poll-btn" data-value="yes">Yes</button>
+          <button class="poll-btn" data-value="sometimes">Sometimes</button>
+          <button class="poll-btn" data-value="no">No</button>
+        </div>
+
+        <div class="poll-results" id="poll-results">
+          <div class="result-row"><span>Yes</span><div class="bar"><div class="fill" data-key="yes"></div></div><span class="pct" data-key="yes">0%</span></div>
+          <div class="result-row"><span>Sometimes</span><div class="bar"><div class="fill" data-key="sometimes"></div></div><span class="pct" data-key="sometimes">0%</span></div>
+          <div class="result-row"><span>No</span><div class="bar"><div class="fill" data-key="no"></div></div><span class="pct" data-key="no">0%</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Get Involved</h4>
+        <ul>
+          <li><a href="#">Learn More</a></li>
+          <li><a href="#">Join the Movement</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <div class="socials">
+          <a><i class="fa-brands fa-instagram"></i></a>
+          <a><i class="fa-brands fa-twitter"></i></a>
+          <a><i class="fa-brands fa-facebook"></i></a>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">© <span id="year"></span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
