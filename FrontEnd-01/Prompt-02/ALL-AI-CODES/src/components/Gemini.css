@@ -1,0 +1,460 @@
+/* --- Google Fonts Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap');
+
+/* --- Variables and Global Reset --- */
+:root {
+    --color-primary: #1a73e8; /* Blue */
+    --color-secondary: #00897b; /* Teal/Green */
+    --color-background: #f4f8fb; /* Light Blueish Gray */
+    --color-card-bg: #ffffff;
+    --color-text: #333333;
+    --color-dark-text: #1f3f66;
+    --color-accent: #00bfa5; /* Green Accent */
+
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    line-height: 1.6;
+}
+
+.app-container {
+    overflow-x: hidden;
+}
+
+/* --- Utility Classes --- */
+.section-heading {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--color-dark-text);
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section {
+    padding: 4rem 1rem;
+}
+
+/* --- 1. Header / Hero Section --- */
+.hero-section {
+    background: url('https://source.unsplash.com/1600x900/?water-conservation,eco-friendly') center center / cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-card-bg); /* White text */
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for better text readability */
+    padding: 2rem;
+    border-radius: 8px;
+    z-index: 1;
+    animation: fadeIn 1s ease-out;
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    font-weight: 400;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button {
+    background-color: var(--color-accent);
+    color: var(--color-card-bg);
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+.cta-button:hover {
+    background-color: #009688; /* Darker accent */
+    transform: translateY(-2px);
+}
+
+/* --- 2. Water Conservation Tips Section --- */
+.tips-section {
+    background-color: var(--color-background);
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tip-card {
+    background-color: var(--color-card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0; /* Initial state for fade-in */
+    transform: translateY(20px);
+    animation: slideInUp 0.6s ease-out forwards;
+}
+
+/* Staggered animation for cards */
+.tips-grid .tip-card:nth-child(1) { animation-delay: 0.1s; }
+.tips-grid .tip-card:nth-child(2) { animation-delay: 0.2s; }
+.tips-grid .tip-card:nth-child(3) { animation-delay: 0.3s; }
+.tips-grid .tip-card:nth-child(4) { animation-delay: 0.4s; }
+.tips-grid .tip-card:nth-child(5) { animation-delay: 0.5s; }
+.tips-grid .tip-card:nth-child(6) { animation-delay: 0.6s; }
+
+
+.tip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.tip-icon-container {
+    background-color: var(--color-secondary);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.tip-icon {
+    color: var(--color-card-bg);
+    font-size: 1.8rem;
+}
+
+.tip-title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--color-dark-text);
+    margin-bottom: 0.5rem;
+}
+
+.tip-description {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+
+/* --- 3. Infographics / Visual Representation --- */
+.infographic-section {
+    background-color: var(--color-card-bg);
+    padding: 5rem 1rem;
+}
+
+.infographic-chart {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 3rem;
+    height: 300px;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 1rem;
+}
+
+.chart-bar {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.chart-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.bar-label {
+    position: absolute;
+    bottom: -2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-dark-text);
+}
+
+.bar-fill {
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+    transition: height 1s ease-out; /* Smooth growth animation */
+}
+
+.initial-usage {
+    height: 100%; /* Represents 100% usage */
+    background-color: var(--color-primary);
+}
+
+.potential-savings {
+    height: 0%; /* Start at 0, grows on scroll */
+    background-color: var(--color-accent);
+}
+
+.chart-note {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+/* --- 4. Interactive Features (Quiz) --- */
+.quiz-section {
+    background-color: var(--color-background);
+    padding: 5rem 1rem;
+}
+
+.quiz-options {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.quiz-button {
+    background-color: var(--color-card-bg);
+    border: 2px solid #ccc;
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: left;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+}
+
+.quiz-button:hover:not(:disabled) {
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-button.selected {
+    background-color: var(--color-secondary);
+    color: var(--color-card-bg);
+    border-color: var(--color-secondary);
+    transform: scale(1.02);
+}
+
+.quiz-button:disabled {
+    cursor: default;
+    opacity: 0.7;
+}
+
+.quiz-result {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: var(--color-card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.result-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.result-icon {
+    font-size: 1.5rem;
+}
+.result-icon.correct { color: var(--color-accent); }
+.result-icon.incorrect { color: #f44336; /* Red */ }
+
+.result-text {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+}
+.result-text.correct { color: var(--color-accent); }
+.result-text.incorrect { color: #f44336; }
+
+.progress-bar-container {
+    margin: 1.5rem 0;
+}
+
+.progress-bar-track {
+    background-color: #e0e0e0;
+    border-radius: 50px;
+    height: 15px;
+    overflow: hidden;
+    margin-top: 0.5rem;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: var(--color-primary);
+    width: 0%; /* Initial width */
+    transition: width 1s ease-out; /* Animation for filling */
+    border-radius: 50px;
+}
+
+.quiz-feedback {
+    font-size: 0.95rem;
+    color: var(--color-dark-text);
+}
+
+
+/* --- 5. Footer --- */
+.footer-section {
+    background-color: var(--color-dark-text);
+    color: #cccccc;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-link {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color var(--transition-speed);
+}
+
+.footer-link:hover {
+    color: var(--color-accent);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon {
+    color: #cccccc;
+    font-size: 1.2rem;
+    transition: color var(--transition-speed), transform var(--transition-speed);
+}
+
+.social-icons a:hover .social-icon {
+    color: var(--color-accent);
+    transform: scale(1.1);
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from { 
+        opacity: 0; 
+        transform: translateY(30px);
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* --- Responsiveness (Mobile-First) --- */
+
+/* Small Tablets and bigger phones */
+@media (min-width: 480px) {
+    .hero-title {
+        font-size: 4rem;
+    }
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+    .section-heading {
+        font-size: 2.5rem;
+    }
+    .hero-title {
+        font-size: 5rem;
+    }
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .quiz-options {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .quiz-button {
+        width: 30%; /* Make buttons take up less width for a cleaner layout */
+        text-align: center;
+    }
+}
+
+/* Desktops */
+@media (min-width: 1024px) {
+    section {
+        padding: 6rem 2rem;
+    }
+    .tips-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
