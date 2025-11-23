@@ -7,9 +7,9 @@ body {
 }
 
 /* Hero Section */
-.hero-section {
+.hero-perp {
   height: 60vh;
-  background: url('./assets/water-hero.jpg') center/cover no-repeat;
+  background: url('./water-hero.jpg') center/cover no-repeat;
   position: relative;
   display: flex;
   align-items: center;

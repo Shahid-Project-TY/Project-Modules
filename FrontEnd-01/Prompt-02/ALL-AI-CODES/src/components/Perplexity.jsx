@@ -48,7 +48,7 @@ export default function App() {
   return (
     <div>
       {/* Header/Hero Section */}
-      <header className="hero-section">
+      <header className="hero-perp">
         <div className="hero-overlay">
           <h1>Save Water, Save Life</h1>
           <p>Small changes lead to a big impact on water conservation.</p>

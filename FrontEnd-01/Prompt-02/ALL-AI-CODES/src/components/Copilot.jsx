@@ -21,7 +21,7 @@ function App() {
   return (
     <div>
       {/* Hero Section */}
-      <header className="hero">
+      <header className="hero-copilot">
         <h1>Save Water, Save Life</h1>
         <p>Every drop counts — conserve water for a sustainable future.</p>
         <button onClick={scrollToTips}>Learn Tips</button>

@@ -44,7 +44,7 @@ export default function App() {
   return (
     <div className="app">
       {/* ---------- Header / Hero ---------- */}
-      <header className="hero">
+      <header className="hero-meta">
         <div className="hero-overlay">
           <h1>Save Water, Save Life</h1>
           <p>Every drop counts – together we can protect our most precious resource.</p>

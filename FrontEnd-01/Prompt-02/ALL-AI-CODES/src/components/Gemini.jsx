@@ -170,7 +170,7 @@ const App = () => {
   return (
     <div className="app-container">
       {/* 1. Header / Hero Section */}
-      <header className="hero-section">
+      <header className="hero-gemini">
         <div className="hero-overlay">
           <h1 className="hero-title">Save Water, Save Life 💧</h1>
           <p className="hero-subtitle">Every Drop is a Promise for Tomorrow: Smart Management and Conservation for a Greener Future.</p>

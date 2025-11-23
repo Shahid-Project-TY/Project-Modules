@@ -49,7 +49,7 @@ h3 {
 }
 
 /* ---------------- Hero ---------------- */
-.hero {
+.hero-meta {
   background: url("https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7")
     no-repeat center/cover;
   height: 100vh;
@@ -65,7 +65,7 @@ h3 {
   padding: 2rem;
   border-radius: 8px;
 }
-.hero p {
+.hero-meta p {
   max-width: 600px;
   margin: 1rem auto;
   font-size: 1.2rem;

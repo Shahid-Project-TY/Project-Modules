@@ -27,12 +27,12 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
+/* body {
     font-family: var(--font-body);
     color: var(--color-text);
     background-color: var(--color-background);
     line-height: 1.6;
-}
+} */
 
 .app-container {
     overflow-x: hidden;
@@ -63,7 +63,7 @@ section {
 }
 
 /* --- 1. Header / Hero Section --- */
-.hero-section {
+.hero-gemini {
     background: url('https://source.unsplash.com/1600x900/?water-conservation,eco-friendly') center center / cover no-repeat;
     height: 100vh;
     display: flex;
