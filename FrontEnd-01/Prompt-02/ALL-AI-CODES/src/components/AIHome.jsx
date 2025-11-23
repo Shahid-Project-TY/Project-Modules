@@ -1,4 +1,5 @@
 import React from "react";
+import "./AllHome.css";
 const AIHome = () => {
   return (
     <div className="ai-home">
