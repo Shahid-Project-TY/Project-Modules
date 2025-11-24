@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
-import AIHome from "./components/AIHome";
+import AllHome from "./components/AIHome";
 import GPT from "./components/GPT";
 import Gemini from "./components/Gemini";
 import Perplexity from "./components/Perplexity";
@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path='/' element={<AIHome />} />
+        <Route path='/' element={<AllHome />} />
         <Route path='/GPT' element={<GPT />} />
         <Route path='/Gemini' element={<Gemini />} />
         <Route path='/Perplexity' element={<Perplexity />} />

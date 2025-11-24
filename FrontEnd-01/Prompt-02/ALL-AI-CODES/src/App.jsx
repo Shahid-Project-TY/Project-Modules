@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 
-import AIHome from "./components/AIHome";
+import AIHome from "./components/AllHome";
 import GPT from "./components/GPT";
 import Gemini from "./components/Gemini";
 import Perplexity from "./components/Perplexity";
