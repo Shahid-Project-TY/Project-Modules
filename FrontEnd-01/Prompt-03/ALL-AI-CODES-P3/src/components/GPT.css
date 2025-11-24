@@ -1,0 +1,180 @@
+/* GPT.css
+   Scoped styles — all selectors are class-based and prefixed with GPT-
+   No universal element selectors (no h1, p, *, etc).
+*/
+
+/* Root variables (colors etc) kept global via :root */
+:root {
+  --GPT-bg: #0f1724;
+  --GPT-card-bg: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  --GPT-surface: #0b1220;
+  --GPT-muted: #9aa4b2;
+  --GPT-accent: #6ee7b7;
+  --GPT-accent-2: #7dd3fc;
+  --GPT-glass: rgba(255,255,255,0.03);
+  --GPT-text: #e6eef6;
+  --GPT-radius: 12px;
+  --GPT-container-max: min(1100px, 94%);
+}
+
+/* Top-level root to scope fonts/background */
+.GPT-root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, #071023 0%, #07101a 60%);
+  color: var(--GPT-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100%;
+  line-height: 1.45;
+}
+
+/* container */
+.GPT-container { width: var(--GPT-container-max); margin: 0 auto; padding: 1rem; }
+
+/* NAV and HERO */
+.GPT-hero { padding: 2rem 0 3rem; position: relative; }
+.GPT-nav { display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+.GPT-brand { display:flex; align-items:center; gap:0.75rem; cursor:pointer; }
+.GPT-brand-text .GPT-brand-role { display:block; font-size:12px; color:var(--GPT-muted); margin-top:-2px; }
+.GPT-logo svg { filter: drop-shadow(0 6px 18px rgba(0,0,0,0.45)); }
+
+/* navigation links */
+.GPT-nav-links { list-style:none; display:flex; gap:.5rem; margin:0; padding:0; align-items:center; }
+.GPT-btn-link { background:transparent; border:0; color:var(--GPT-muted); padding:.35rem .6rem; border-radius:8px; cursor:pointer; }
+.GPT-btn-link:hover { color:var(--GPT-text); background:rgba(255,255,255,0.02); transform:translateY(-1px); transition:all .18s ease; }
+
+/* hero inner */
+.GPT-hero-inner { display:grid; grid-template-columns:1fr; gap:1rem; margin-top:1.2rem; align-items:center; }
+.GPT-hero-content { padding:1rem; }
+.GPT-animated-title { font-size:clamp(1.6rem, 4vw, 2.2rem); margin:0; line-height:1.02; display:flex; flex-direction:column; gap:6px; }
+.GPT-title-hi { font-weight:500; color:var(--GPT-muted); font-size:14px; }
+.GPT-title-name { font-size:2rem; font-weight:700; color:var(--GPT-text); letter-spacing:-0.5px; }
+
+/* role/tagline */
+.GPT-role-text { margin-top:.6rem; color:var(--GPT-muted); font-size:15px; }
+.GPT-tagline { color:var(--GPT-accent-2); font-weight:600; }
+
+/* buttons */
+.GPT-btn { border:0; padding:.6rem .9rem; border-radius:10px; cursor:pointer; font-weight:600; background:transparent; color:var(--GPT-text); display:inline-flex; align-items:center; gap:.5rem; }
+.GPT-btn-primary { background:linear-gradient(90deg,var(--GPT-accent) 0%, var(--GPT-accent-2) 100%); color:#032; box-shadow: 0 6px 18px rgba(110,231,183,0.08); transition:transform .18s ease, box-shadow .18s ease; }
+.GPT-btn-primary:hover { transform:translateY(-4px) scale(1.01); box-shadow: 0 14px 36px rgba(110,231,183,0.14); }
+.GPT-btn-ghost { background:rgba(255,255,255,0.03); color:var(--GPT-text); }
+.GPT-btn-subtle { background:transparent; color:var(--GPT-muted); border:1px solid rgba(255,255,255,0.03); }
+.GPT-btn-tiny { padding:.4rem .6rem; font-size:13px; border-radius:8px; }
+.GPT-btn-ico { display:inline-flex; transform:translateX(0); transition:transform .25s ease; }
+.GPT-btn-primary:hover .GPT-btn-ico { transform:translateX(6px) rotate(-6deg); }
+
+/* badges */
+.GPT-hero-badges { margin-top:1rem; display:flex; gap:.45rem; flex-wrap:wrap; }
+.GPT-badge { background:rgba(255,255,255,0.03); padding:.35rem .6rem; border-radius:999px; color:var(--GPT-muted); font-size:12px; }
+
+/* profile card */
+.GPT-hero-art { display:flex; justify-content:center; align-items:center; margin-top:1rem; }
+.GPT-profile-card { background:var(--GPT-card-bg); border-radius:16px; padding:12px; width:220px; display:flex; gap:.8rem; align-items:center; border:1px solid rgba(255,255,255,0.02); box-shadow: 0 8px 28px rgba(2,6,23,0.6); transition:transform .3s ease; }
+.GPT-profile-card:hover { transform:translateY(-8px); }
+.GPT-profile-photo { width:78px; height:78px; flex:0 0 78px; border-radius:12px; overflow:hidden; display:grid; place-items:center; }
+.GPT-profile-svg { width:100%; height:100%; }
+
+/* main sections */
+.GPT-main { padding-bottom:4rem; }
+.GPT-section { margin:2.2rem 0; }
+.GPT-section-header { margin-bottom:0.8rem; }
+.GPT-section-title { margin:0 0 .4rem 0; font-size:1.4rem; }
+.GPT-muted { color:var(--GPT-muted); font-size:0.95rem; }
+
+/* about */
+.GPT-about-grid { display:grid; grid-template-columns:1fr; gap:1rem; align-items:center; }
+.GPT-about-art { display:grid; place-items:center; padding:0.6rem; }
+.GPT-about-svg { width:100%; max-width:320px; height:auto; border-radius:12px; }
+.GPT-paragraph { margin:0 0 0.6rem 0; color:var(--GPT-text); }
+
+/* projects */
+.GPT-projects-grid { display:grid; grid-template-columns:1fr; gap:1rem; margin-top:1rem; }
+.GPT-project-card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:12px; overflow:hidden; transition:transform .2s ease, box-shadow .2s ease; display:flex; flex-direction:column; border:1px solid rgba(255,255,255,0.02); }
+.GPT-project-card:hover { transform:translateY(-6px); box-shadow: 0 18px 48px rgba(2,6,23,0.6); }
+.GPT-project-screenshot { cursor:pointer; }
+.GPT-screenshot-svg { width:100%; height:160px; display:block; border-radius:8px; }
+
+/* project body */
+.GPT-project-body { padding:0.9rem 1rem 1.1rem; display:flex; flex-direction:column; gap:.45rem; }
+.GPT-project-title { margin:0; font-size:1.05rem; }
+.GPT-project-short { color:var(--GPT-muted); margin:0; font-size:0.94rem; }
+.GPT-project-meta { display:flex; justify-content:space-between; align-items:center; margin-top:.6rem; gap:0.6rem; flex-wrap:wrap; }
+.GPT-stack { display:flex; gap:.35rem; flex-wrap:wrap; }
+.GPT-pill { background:rgba(255,255,255,0.03); padding:.25rem .5rem; border-radius:999px; font-size:12px; color:var(--GPT-muted); transition:transform .18s ease; }
+.GPT-pill:hover { transform:translateY(-4px); }
+
+/* resume/skills */
+.GPT-resume-grid { display:grid; grid-template-columns:1fr; gap:1rem; margin-top:1rem; }
+.GPT-skills-card, .GPT-resume-card { background:var(--GPT-card-bg); padding:1rem; border-radius:12px; border:1px solid rgba(255,255,255,0.02); }
+.GPT-skills-list { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:.6rem; }
+.GPT-skill-row { display:flex; gap:.6rem; align-items:center; justify-content:space-between; }
+.GPT-skill-name { font-size:0.95rem; color:var(--GPT-text); flex:1; }
+.GPT-skill-level { height:8px; flex: 0 0 10%; border-radius:999px; background:linear-gradient(90deg,var(--GPT-accent), var(--GPT-accent-2)); opacity:.9; }
+.GPT-skill-badge { font-size:12px; color:var(--GPT-muted); min-width:40px; text-align:right; }
+
+.GPT-progress { background: rgba(255,255,255,0.02); height:8px; border-radius:999px; margin-top:.4rem; }
+.GPT-progress-bar { height:100%; background:linear-gradient(90deg, rgba(110,231,183,0.9), rgba(125,211,252,0.9)); border-radius:999px; width:0%; transition:width .9s cubic-bezier(.18,.9,.3,1); }
+
+/* contact */
+.GPT-contact-grid { display:grid; grid-template-columns:1fr; gap:1rem; margin-top:1rem; }
+.GPT-contact-form { background:var(--GPT-card-bg); padding:1rem; border-radius:12px; border:1px solid rgba(255,255,255,0.02); display:flex; flex-direction:column; gap:.8rem; }
+.GPT-form-row { display:flex; gap:.6rem; flex-direction:column; }
+.GPT-label { display:flex; flex-direction:column; font-size:13px; color:var(--GPT-muted); gap:.4rem; }
+.GPT-label-text { font-size:13px; color:var(--GPT-muted); }
+.GPT-input, .GPT-textarea {
+  background:transparent; border:1px solid rgba(255,255,255,0.04); padding:.6rem .7rem; border-radius:8px; color:var(--GPT-text);
+  outline:none;
+}
+.GPT-form-actions { display:flex; gap:.5rem; }
+.GPT-form-status { color:var(--GPT-accent); padding-top:.4rem; }
+
+/* aside mini */
+.GPT-contact-aside { display:none; }
+
+/* footer */
+.GPT-footer { margin-top:2rem; padding:1rem 0; border-top:1px solid rgba(255,255,255,0.02); }
+.GPT-footer-inner { display:flex; gap:1rem; align-items:center; justify-content:space-between; }
+
+/* modal */
+.GPT-modal-overlay { position:fixed; inset:0; background:linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)); display:flex; align-items:center; justify-content:center; z-index:60; padding:1rem; }
+.GPT-modal { width:100%; max-width:980px; background:var(--GPT-surface); border-radius:14px; padding:1rem; border:1px solid rgba(255,255,255,0.03); box-shadow:0 30px 80px rgba(2,6,23,0.7); position:relative; }
+.GPT-close { position:absolute; right:10px; top:10px; background:transparent; border:0; color:var(--GPT-muted); font-size:20px; cursor:pointer; }
+.GPT-modal-grid { display:grid; grid-template-columns:1fr; gap:1rem; }
+.GPT-modal-screenshot { border-radius:8px; overflow:hidden; }
+.GPT-modal-body .GPT-modal-title { margin-top:0; }
+.GPT-modal-actions { margin-top:1rem; display:flex; gap:.6rem; }
+
+/* reveal animations (class-based) */
+.GPT-reveal { opacity:0; transform:translateY(18px) scale(.996); transition: all .7s cubic-bezier(.12,.7,.2,1); will-change:transform,opacity; }
+.GPT-revealed { opacity:1; transform:none; }
+
+/* responsive layout (larger screens) */
+@media(min-width:720px){
+  .GPT-hero-inner { grid-template-columns: 1fr 320px; align-items:center; gap:2rem; }
+  .GPT-about-grid { grid-template-columns: 1fr 360px; align-items:center; }
+  .GPT-projects-grid { grid-template-columns: repeat(2, 1fr); }
+  .GPT-resume-grid { grid-template-columns: 1fr 1fr; }
+  .GPT-contact-grid { grid-template-columns: 1fr 320px; }
+  .GPT-contact-aside { display:block; }
+  .GPT-project-card { flex-direction:column; height:100%; }
+  .GPT-modal-grid { grid-template-columns: 1fr 1fr; align-items:center; }
+}
+
+/* wide screens */
+@media(min-width:1100px){
+  .GPT-projects-grid { grid-template-columns: repeat(3, 1fr); }
+  .GPT-container { padding:1.6rem; }
+}
+
+/* small helpers (links, social icons) */
+.GPT-link { color:inherit; text-decoration:none; }
+.GPT-social-link { margin-right:.5rem; display:inline-flex; padding:.35rem; border-radius:8px; }
+.GPT-social-link svg { width:18px; height:18px; fill:var(--GPT-muted); transition:transform .18s ease, fill .18s ease; }
+.GPT-social-link:hover svg { transform:translateY(-3px); fill:var(--GPT-accent); }
+
+/* skip link (a utility) */
+.GPT-skip { position:fixed; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
+.GPT-skip:focus { left:1rem; top:1rem; width:auto; height:auto; background:#111827; color:white; padding:.6rem .9rem; border-radius:8px; }
+
+/* progress bar initial animation: width is set inline on .GPT-progress-bar */

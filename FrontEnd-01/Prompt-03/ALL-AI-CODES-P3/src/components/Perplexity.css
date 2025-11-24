@@ -1,0 +1,463 @@
+/* Reset and base styles */
+.perplexity-body,
+.perplexity-main,
+.perplexity-footer,
+.perplexity-header,
+.perplexity-about,
+.perplexity-projects,
+.perplexity-resume,
+.perplexity-contact {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  scroll-behavior: smooth;
+}
+
+.perplexity-header {
+  background: linear-gradient(135deg, #007cf0, #00dfd8);
+  color: white;
+  padding: 20px 2rem;
+  /* position: sticky; */
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.15);
+}
+
+.perplexity-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1120px;
+  margin: 0 auto 1rem auto;
+}
+
+.perplexity-logo {
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 2px;
+  cursor: default;
+  user-select: none;
+}
+
+.perplexity-nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.perplexity-nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.perplexity-nav-links a:hover,
+.perplexity-nav-links a:focus {
+  color: #ffd700;
+  outline: none;
+}
+
+.perplexity-hero {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  user-select: none;
+}
+
+.perplexity-hero-title {
+  font-size: 3rem;
+  margin-bottom: 0.4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  animation: fadeInDown 1.5s ease forwards;
+}
+
+.perplexity-hero-tagline {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #e0f7fa;
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+/* About Section */
+.perplexity-about {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.perplexity-about-content {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
+}
+
+.perplexity-profile-pic {
+  flex-shrink: 0;
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(135deg, #00bcd4, #8bc34a);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: 900;
+  cursor: default;
+  user-select: none;
+  transition: transform 0.4s ease;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.2);
+}
+
+.perplexity-profile-pic:hover {
+  transform: rotate(15deg) scale(1.05);
+}
+
+.perplexity-profile-initials {
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 0.4em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.perplexity-about-text {
+  flex-grow: 1;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Projects Section */
+.perplexity-projects {
+  background: #f9fafb;
+  padding: 3rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto 4rem;
+  border-radius: 10px;
+}
+
+.perplexity-section-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 0.1em;
+  user-select: none;
+}
+
+.perplexity-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.perplexity-project-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgb(0 0 0 / 0.1);
+  padding: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  outline-offset: 4px;
+}
+
+.perplexity-project-card:hover,
+.perplexity-project-card:focus {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgb(0 0 0 / 0.15);
+  outline: none;
+}
+
+.perplexity-project-icon {
+  font-size: 2.8rem;
+  color: #00acc1;
+  user-select: none;
+}
+
+.perplexity-project-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.2rem;
+}
+
+.perplexity-project-description {
+  font-size: 1rem;
+  color: #555;
+}
+
+.perplexity-project-details {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #333;
+  border-top: 1px solid #ddd;
+  padding-top: 0.5rem;
+  user-select: text;
+}
+
+/* Resume / Skills Section */
+.perplexity-resume {
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  padding: 2rem 2rem;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.05);
+}
+
+.perplexity-skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.perplexity-skill-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  width: 220px;
+  user-select: none;
+}
+
+.perplexity-skill-icon {
+  font-size: 1.8rem;
+  color: #0097a7;
+}
+
+.perplexity-skill-label {
+  flex-shrink: 0;
+  width: 75px;
+  font-weight: 600;
+  color: #222;
+}
+
+.perplexity-skill-progress-bar {
+  background: #e0e0e0;
+  border-radius: 8px;
+  width: 100%;
+  height: 14px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgb(0 0 0 / 0.1);
+}
+
+.perplexity-skill-progress {
+  background: #00bcd4;
+  height: 100%;
+  transition: width 1s ease;
+}
+
+.perplexity-resume-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #007cf0;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.4rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 5px 12px rgb(0 124 240 / 0.5);
+}
+
+.perplexity-resume-download:hover,
+.perplexity-resume-download:focus {
+  background: #005bb5;
+  outline: none;
+}
+
+/* Contact Section */
+.perplexity-contact {
+  max-width: 900px;
+  margin: 4rem auto 5rem;
+  padding: 2rem 2rem;
+  background: #e0f7fa;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.08);
+  user-select: none;
+}
+
+.perplexity-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.perplexity-contact-form label {
+  font-weight: 600;
+  color: #006064;
+  user-select: text;
+}
+
+.perplexity-contact-form input,
+.perplexity-contact-form textarea {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 2px solid #004d40;
+  resize: none;
+  outline-offset: 3px;
+  transition: border-color 0.3s ease;
+}
+
+.perplexity-contact-form input:focus,
+.perplexity-contact-form textarea:focus {
+  border-color: #0097a7;
+  outline: none;
+}
+
+.perplexity-button-submit {
+  background: #00796b;
+  color: white;
+  font-weight: 700;
+  padding: 0.9rem 1.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 4px 12px rgb(0 121 107 / 0.6);
+  transition: background-color 0.4s ease, transform 0.3s ease;
+  user-select: none;
+}
+
+.perplexity-button-submit:hover,
+.perplexity-button-submit:focus {
+  background: #004d40;
+  outline: none;
+  transform: scale(1.05);
+}
+
+/* Social Links */
+.perplexity-social-links {
+  text-align: center;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.perplexity-icon-link {
+  color: #004d40;
+  font-size: 2.2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  user-select: none;
+}
+
+.perplexity-icon-link:hover,
+.perplexity-icon-link:focus {
+  color: #007cf0;
+  transform: scale(1.2);
+  outline: none;
+}
+
+/* Footer */
+.perplexity-footer {
+  background: #004d40;
+  color: white;
+  text-align: center;
+  padding: 1.4rem 1rem;
+  font-size: 0.9rem;
+  user-select: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1120px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.perplexity-footer-nav a {
+  color: #a7d8d6;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: 600;
+  user-select: none;
+}
+
+.perplexity-footer-nav a:hover,
+.perplexity-footer-nav a:focus {
+  color: white;
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .perplexity-nav-links {
+    display: none; /* Can add hamburger menu if desired */
+  }
+  .perplexity-about {
+    flex-direction: column;
+  }
+  .perplexity-skills-container {
+    justify-content: flex-start;
+  }
+  .perplexity-skill-bar {
+    width: 100%;
+  }
+  .perplexity-projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .perplexity-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Accessibility for keyboard focus */
+.perplexity-project-card:focus-visible,
+.perplexity-button-submit:focus-visible,
+.perplexity-icon-link:focus-visible,
+.perplexity-nav-links a:focus-visible,
+.perplexity-footer-nav a:focus-visible {
+  outline: 3px solid #00bcd4;
+  outline-offset: 2px;
+}
